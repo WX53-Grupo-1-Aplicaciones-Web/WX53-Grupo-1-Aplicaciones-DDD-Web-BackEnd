@@ -1,9 +1,12 @@
 using System.Reflection;
 using Application.CommandServices.CustomerCommandService;
+using Application.CommandServices.ProductCommandService;
 using Application.QueryServices.CustomerQueryService;
+using Application.QueryServices.ProductQueryService;
 using Domain.Publishing.Models.Entities;
 using Domain.Publishing.Repositories;
 using Domain.Publishing.Services;
+using Domain.Publishing.Services.ProductServices;
 using Infrastructure.Publishing.Persistence;
 using Infrastructure.Shared.Context;
 using Microsoft.EntityFrameworkCore;
@@ -53,6 +56,11 @@ builder.Services.AddSwaggerGen(options =>
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 builder.Services.AddScoped<ICustomerCommandService, CustomerCommandService>();
 builder.Services.AddScoped<ICustomerQueryService, CustomerQueryService>(); 
+
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductCommandService, ProductCommandService>();
+builder.Services.AddScoped<IProductQueryService, ProductQueryServices>();
+
 builder.Services.AddScoped<IEncryptService, EncryptCommandService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 
@@ -67,6 +75,8 @@ builder.Services.AddDbContext<ArtisaniaDBContext>(
         dbContextOptions.UseMySql(connectionString,
             ServerVersion.AutoDetect(connectionString)
         );
+        
+        
     });
 
 var app = builder.Build();
@@ -84,7 +94,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 app.UseCors("AllowAllPolicy");
-app.UseMiddleware<AuthenticationMiddlleware>();
+//app.UseMiddleware<AuthenticationMiddlleware>();
 app.UseHttpsRedirection();
 app.UseAuthorization();
 
