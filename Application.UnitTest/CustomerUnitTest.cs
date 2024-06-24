@@ -1,3 +1,4 @@
+using System.Data;
 using System.Net.Mime;
 using Application.CommandServices.CustomerCommandService;
 using AutoMapper;
@@ -63,5 +64,32 @@ public class CustomerUnitTest
 
         // Assert
         Assert.Equal("token", result);
+    }
+    [Fact]
+    public async Task SignUpCommand_ShouldThrowException_WhenEmailAlreadyExists()
+    {
+        // Arrange
+        var command = new SignUpCommand
+        {
+            Usuario = "testUser",
+            Correo = "existing@example.com",
+            Contraseña = "password",
+            IsArtisan = false,
+            Role = "User"
+        };
+
+        var existingCustomer = new Customer
+        {
+            Id = 1,
+            Usuario = "existingUser",
+            Correo = "existing@example.com",
+            ContraseñaHashed = "hashed_password"
+        };
+
+        _customerRepositoryMock.Setup(x => x.GetByEmail(command.Correo)).ReturnsAsync(existingCustomer);
+
+        // Act & Assert
+        var exception = await Assert.ThrowsAsync<DuplicateNameException>(async () => await _customerCommandService.Handle(command));
+        Assert.Equal("Usuario ya existe", exception.Message);
     }
 }

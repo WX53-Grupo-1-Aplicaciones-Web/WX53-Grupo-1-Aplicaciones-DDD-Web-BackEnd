@@ -55,4 +55,14 @@ public class ProductRepository: IProductRepository
             .Include(p => p.Caracteristicas)
             .FirstOrDefaultAsync(p => p.Id == id);
     }
+    public async Task<Product> GetByNameAsync(string name)
+    {
+        return await _context.Products
+            .Include(p => p.ParametrosPersonalizacion)
+            .ThenInclude(pp => pp.Parametros)
+            .ThenInclude(p => p.Valores)
+            .Include(p => p.ImagenesDetalle)
+            .Include(p => p.Caracteristicas)
+            .FirstOrDefaultAsync(p => p.Nombre == name);
+    }
 }

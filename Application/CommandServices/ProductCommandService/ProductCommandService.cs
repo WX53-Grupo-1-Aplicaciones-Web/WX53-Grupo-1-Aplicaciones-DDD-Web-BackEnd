@@ -18,7 +18,15 @@ public class ProductCommandService:IProductCommandService
     }
     public async Task<int> Handle(CreateProductCommand command)
     {
-        var Product = _mapper.Map<CreateProductCommand, Product>(command);
-        return await _productRepository.SaveAsync(Product);
+        var productName = command.Nombre;
+
+        var existingProduct = await _productRepository.GetByNameAsync(productName);
+        if (existingProduct != null)
+        {
+            throw new Exception("Ya existe un producto con el mismo nombre.");
+        }
+
+        var product = _mapper.Map<CreateProductCommand, Product>(command);
+        return await _productRepository.SaveAsync(product);
     }
 }

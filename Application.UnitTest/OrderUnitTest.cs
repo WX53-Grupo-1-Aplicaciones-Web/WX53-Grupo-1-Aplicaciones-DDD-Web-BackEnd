@@ -1,14 +1,59 @@
+using Application.CommandServices.OrderCommandService;
+using AutoMapper;
+using Domain.Publishing.Models.Commands.OrderCommands;
+using Domain.Publishing.Models.Entities.Product;
+using Domain.Publishing.Repositories;
+using Moq;
+using WX_53_Artisania.Mapper;
 using Xunit;
 
 namespace Domain.test
 {
     public class OrderUnitTest
     {
-        [Fact]
-        public void TestAddition()
+        private readonly Mock<IProductRepository> _productRepositoryMock;
+        private readonly Mock<IOrderRepository> _orderRepositoryMock;
+        private readonly OrderCommandService _orderCommandService;
+
+        public OrderUnitTest()
         {
-            int result = 1 + 1;
-            Assert.Equal(2, result);
+            _productRepositoryMock = new Mock<IProductRepository>();
+            _orderRepositoryMock = new Mock<IOrderRepository>();
+
+            var config = new MapperConfiguration(cfg =>
+            {
+                cfg.AddProfile<RequestToModel>();
+                // Add your other AutoMapper profiles here
+            });
+            var mapper = config.CreateMapper();
+
+            _orderCommandService = new OrderCommandService(_orderRepositoryMock.Object, mapper, _productRepositoryMock.Object);
+        }
+        [Fact]
+        public async Task CreateOrderCommand_ShouldIncreasePrice_WhenProductHasBeenOrderedBefore()
+        {
+            // Arrange
+            var command = new CreateOrderCommand
+            {
+                ProductId = "1",
+                Price = 100m
+            };
+
+            var product = new Product
+            {
+                Id = 1,
+                Precio = 100m,
+                
+            };
+
+            _productRepositoryMock.Setup(x => x.GetByIdAsync(It.IsAny<int>())).ReturnsAsync(product);
+            _orderRepositoryMock.Setup(x => x.GetOrderCountForProduct(command.ProductId)).ReturnsAsync(2);
+
+            // Act
+            var result = await _orderCommandService.Handle(command);
+
+            // Assert
+            Assert.Equal(100m + 100m * 0.003m * 2, command.Price);
         }
     }
 }

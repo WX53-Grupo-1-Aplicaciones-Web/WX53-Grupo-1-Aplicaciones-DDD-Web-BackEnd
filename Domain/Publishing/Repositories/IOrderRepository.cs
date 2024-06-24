@@ -7,5 +7,7 @@ public interface IOrderRepository
     Task<int> SaveAsync(Order data);
     Task<List<Order>> GetAllAsync();
     Task<Order> GetByIdAsync(int id);
+    Task<int> GetOrderCountForProduct(string productId);
+
 
 }

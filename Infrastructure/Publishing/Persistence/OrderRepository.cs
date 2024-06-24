@@ -52,4 +52,8 @@ public class OrderRepository: IOrderRepository
         }
         return order;
     }
+    public async Task<int> GetOrderCountForProduct(string productId)
+    {
+        return await _context.Orders.CountAsync(o => o.ProductId == productId);
+    }
 }
