@@ -1,0 +1,239 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Presentation</name>
+    </assembly>
+    <members>
+        <member name="T:WX_53_Artisania.Publishing.Controllers.CustomerController">
+            <summary>
+            Controlador para gestionar las operaciones de los clientes.
+            </summary>
+            <remarks>
+            Proporciona endpoints para obtener todos los clientes, obtener un cliente por su ID, crear un nuevo cliente, iniciar sesión, registrar y actualizar la información del cliente.
+            </remarks>
+        </member>
+        <member name="M:WX_53_Artisania.Publishing.Controllers.CustomerController.GetAsync">
+             <summary>
+             Obtiene todos los clientes.
+             </summary>
+             <remarks>
+             Ejemplo de petición:
+            
+                 GET /api/clientes
+            
+             </remarks>
+             <returns>Una lista de clientes si se encuentran.</returns>
+             <response code="200">Retorna la lista de clientes.</response>
+             <response code="404">Si no se encuentran clientes.</response>
+        </member>
+        <member name="M:WX_53_Artisania.Publishing.Controllers.CustomerController.GetAsync(System.Int32)">
+             <summary>
+             Obtiene un cliente por su ID.
+             </summary>
+             <remarks>
+             Ejemplo de petición:
+            
+                 GET /api/clientes/{id}
+            
+             </remarks>
+             <param name="id">El ID del cliente.</param>
+             <returns>Los detalles del cliente si se encuentra.</returns>
+             <response code="200">Retorna los detalles del cliente.</response>
+             <response code="404">Si el cliente no se encuentra.</response>
+        </member>
+        <member name="M:WX_53_Artisania.Publishing.Controllers.CustomerController.Login(Domain.Publishing.Models.Commands.CustomerCommands.SignInCommand)">
+             <summary>
+             Inicia sesión un cliente existente.
+             </summary>
+             <remarks>
+             Ejemplo de petición:
+            
+                 POST /api/clientes/login
+                 {
+                    "username": "johndoe",
+                    "password": "password123"
+                 }
+            
+             </remarks>
+             <param name="command">El comando de inicio de sesión.</param>
+             <returns>Un token de acceso si el inicio de sesión es exitoso.</returns>
+             <response code="200">Retorna el token de acceso recién creado.</response>
+             <response code="400">Si el comando es nulo o inválido.</response>
+        </member>
+        <member name="M:WX_53_Artisania.Publishing.Controllers.CustomerController.Register(Domain.Publishing.Models.Commands.CustomerCommands.SignUpCommand)">
+             <summary>
+             Registra un nuevo cliente.
+             </summary>
+             <remarks>
+             Ejemplo de petición:
+            
+                 POST /api/clientes/register
+                 {
+                    "usuario": "johndoe",
+                    "contraseña": "password123",
+                    "correo": "johndoe@example.com",
+                    "imagenUsuario": "http://example.com/image.jpg",
+                    "isArtisan": true,
+                    "role": "user"
+                 } 
+            
+             </remarks>
+             <param name="command">El comando de registro.</param>
+             <returns>Un token de acceso si el registro es exitoso.</returns>
+             <response code="200">Retorna el token de acceso recién creado.</response>
+             <response code="400">Si el comando es nulo o inválido.</response>
+        </member>
+        <member name="T:WX_53_Artisania.Publishing.Controllers.OrderController">
+            <summary>
+            Controlador para gestionar las operaciones de las órdenes.
+            </summary>
+            <remarks>
+            Proporciona endpoints para obtener todas las órdenes, obtener una orden por su ID y crear una nueva orden.
+            </remarks>
+        </member>
+        <member name="M:WX_53_Artisania.Publishing.Controllers.OrderController.GetAsync">
+             <summary>
+             Obtiene todas las órdenes.
+             </summary>
+             <remarks>
+             Ejemplo de petición:
+            
+                 GET /api/ordenes
+            
+             </remarks>
+             <returns>Una lista de órdenes si se encuentran.</returns>
+             <response code="200">Retorna la lista de órdenes.</response>
+             <response code="404">Si no se encuentran órdenes.</response>
+        </member>
+        <member name="M:WX_53_Artisania.Publishing.Controllers.OrderController.GetAsync(System.Int32)">
+             <summary>
+             Obtiene una orden por su ID.
+             </summary>
+             <remarks>
+             Ejemplo de petición:
+            
+                 GET /api/ordenes/{id}
+            
+             </remarks>
+             <param name="id">El ID de la orden.</param>
+             <returns>Los detalles de la orden si se encuentra.</returns>
+             <response code="200">Retorna los detalles de la orden.</response>
+             <response code="404">Si la orden no se encuentra.</response>
+        </member>
+        <member name="M:WX_53_Artisania.Publishing.Controllers.OrderController.PostAsync(Domain.Publishing.Models.Commands.OrderCommands.CreateOrderCommand)">
+             <summary>
+             Crea una nueva orden.
+             </summary>
+             <remarks>
+             Ejemplo de petición:
+            
+                 POST /api/ordenes/create
+                 {
+                    "productId": "123",
+                    "product": "Product Name",
+                    "parameters": [
+                      {
+                        "paramName": "Color",
+                        "paramValue": "Red"
+                      }
+                    ],
+                    "price": 100.0
+                 }
+            
+             </remarks>
+             <param name="command">El comando para crear una orden.</param>
+             <returns>El ID de la orden creada si la creación es exitosa.</returns>
+             <response code="201">Retorna el ID de la orden recién creada.</response>
+             <response code="400">Si el comando es nulo o inválido.</response>
+        </member>
+        <member name="T:WX_53_Artisania.Publishing.Controllers.ProductController">
+            <summary>
+            Controlador para gestionar las operaciones de los productos.
+            </summary>
+            <remarks>
+            Proporciona endpoints para obtener todos los productos, obtener un producto por su ID y crear un nuevo producto.
+            </remarks>
+        </member>
+        <member name="M:WX_53_Artisania.Publishing.Controllers.ProductController.GetAsync">
+             <summary>
+             Obtiene todos los productos.
+             </summary>
+             <remarks>
+             Ejemplo de petición:
+            
+                 GET /api/productos
+            
+             </remarks>
+             <returns>Una lista de productos si se encuentran.</returns>
+             <response code="200">Retorna la lista de productos.</response>
+             <response code="404">Si no se encuentran productos.</response>
+        </member>
+        <member name="M:WX_53_Artisania.Publishing.Controllers.ProductController.GetAsync(System.Int32)">
+             <summary>
+             Obtiene un producto por su ID.
+             </summary>
+             <remarks>
+             Ejemplo de petición:
+            
+                 GET /api/productos/{id}
+            
+             </remarks>
+             <param name="id">El ID del producto.</param>
+             <returns>Los detalles del producto si se encuentra.</returns>
+             <response code="200">Retorna los detalles del producto.</response>
+             <response code="404">Si el producto no se encuentra.</response>
+        </member>
+        <member name="M:WX_53_Artisania.Publishing.Controllers.ProductController.PostAsync(Domain.Publishing.Models.Commands.ProductCommands.CreateProductCommand)">
+             <summary>
+             Crea un nuevo producto.
+             </summary>
+             <remarks>
+             Ejemplo de petición:
+            
+                 POST /api/productos/create
+                 {
+                    "nombre": "Producto",
+                    "descripcion": "Descripción del producto",
+                    "precio": 100.0,
+                    "detalles": "Detalles del producto",
+                    "detallesDelArtesano": "Detalles del artesano",
+                    "parametrosPersonalizacion": {
+                      "parametros": [
+                        {
+                          "nombre": "Color",
+                          "valores": [
+                            {
+                              "valor": "Rojo"
+                            }
+                          ]
+                        }
+                      ],
+                      "gravado": "Gravado personalizado"
+                    },
+                    "tamaño": 10.0,
+                    "inputText": "Texto de entrada",
+                    "gravado": "Gravado del producto",
+                    "categoria": "Categoría del producto",
+                    "imagen": "http://example.com/image.jpg",
+                    "imagenesDetalle": [
+                      {
+                        "imagenUrl": "http://example.com/detail_image.jpg"
+                      }
+                    ],
+                    "autor": "Autor del producto",
+                    "caracteristicas": [
+                      {
+                        "nombre": "Material",
+                        "valor": "Madera"
+                      }
+                    ]
+                 }
+            
+             </remarks>
+             <param name="command">El comando para crear un producto.</param>
+             <returns>El ID del producto creado si la creación es exitosa.</returns>
+             <response code="201">Retorna el ID del producto recién creado.</response>
+             <response code="400">Si el comando es nulo o inválido.</response>
+        </member>
+    </members>
+</doc>
