@@ -17,8 +17,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          path: short_path
-
+          fetch-depth: 0
+        env:
+          GIT_CONFIG_PARAMETERS: "'core.longpaths=true'"
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v1
         with:
