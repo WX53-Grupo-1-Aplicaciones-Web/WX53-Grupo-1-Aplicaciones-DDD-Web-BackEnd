@@ -25,9 +25,6 @@ jobs:
         with:
           dotnet-version: '8.x'
           include-prerelease: true
-          
-      - name: Set Git config to handle long paths
-        run: git config --system core.longpaths true
 
       - name: Build with dotnet
         run: dotnet build --configuration Release --source ./short_path
