@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AFXqBHfQQiOad/OwrDv5Oczvcz4mjnW3JHkTitrKriLoYcwhCKJwNEV3MnjHdTE01Fwj0o1JLRqDAdKOZrKqIg==",
+  "dgSpecHash": "LLdMSNLgPz/8QVERgZq7iVi/vYfeHWW0c58ldRKOCtpKDIzTP9p+j+sfSP2nsnZa6EJk+Bk+dA9qLx/4m4XNTw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alessandro\\Desktop\\borrar\\WX-53 Artisania\\WX-53 Artisania\\Presentation\\Presentation.csproj",
+  "projectFilePath": "C:\\Users\\Alessandro\\RiderProjects\\DDD backend artisania\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Presentation\\Presentation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alessandro\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Alessandro\\.nuget\\packages\\bcrypt.net\\0.1.0\\bcrypt.net.0.1.0.nupkg.sha512",
@@ -244,7 +244,11 @@
     "C:\\Users\\Alessandro\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\Alessandro\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512",
     "C:\\Users\\Alessandro\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\Alessandro\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\Alessandro\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\Alessandro\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.17\\microsoft.netcore.app.ref.7.0.17.nupkg.sha512",
+    "C:\\Users\\Alessandro\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.17\\microsoft.windowsdesktop.app.ref.7.0.17.nupkg.sha512",
+    "C:\\Users\\Alessandro\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.17\\microsoft.aspnetcore.app.ref.7.0.17.nupkg.sha512",
+    "C:\\Users\\Alessandro\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.17\\microsoft.netcore.app.host.win-x64.7.0.17.nupkg.sha512"
   ],
   "logs": [
     {

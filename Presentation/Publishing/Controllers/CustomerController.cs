@@ -12,6 +12,12 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WX_53_Artisania.Publishing.Controllers
 {
+    /// <summary>
+    /// Controlador para gestionar las operaciones de los clientes.
+    /// </summary>
+    /// <remarks>
+    /// Proporciona endpoints para obtener todos los clientes, obtener un cliente por su ID, crear un nuevo cliente, iniciar sesión, registrar y actualizar la información del cliente.
+    /// </remarks>
     [Route("api/clientes")]
     [ApiController]
     public class CustomerController : ControllerBase
@@ -30,7 +36,18 @@ namespace WX_53_Artisania.Publishing.Controllers
         }
         
         
-        // GET: api/Customer
+        /// <summary>
+        /// Obtiene todos los clientes.
+        /// </summary>
+        /// <remarks>
+        /// Ejemplo de petición:
+        ///
+        ///     GET /api/clientes
+        ///
+        /// </remarks>
+        /// <returns>Una lista de clientes si se encuentran.</returns>
+        /// <response code="200">Retorna la lista de clientes.</response>
+        /// <response code="404">Si no se encuentran clientes.</response>
         [HttpGet]
         public async Task<IActionResult> GetAsync()
         {
@@ -39,7 +56,19 @@ namespace WX_53_Artisania.Publishing.Controllers
             return Ok(result);
         }
 
-        // GET: api/Customer/5
+        /// <summary>
+        /// Obtiene un cliente por su ID.
+        /// </summary>
+        /// <remarks>
+        /// Ejemplo de petición:
+        ///
+        ///     GET /api/clientes/{id}
+        ///
+        /// </remarks>
+        /// <param name="id">El ID del cliente.</param>
+        /// <returns>Los detalles del cliente si se encuentra.</returns>
+        /// <response code="200">Retorna los detalles del cliente.</response>
+        /// <response code="404">Si el cliente no se encuentra.</response>
         [HttpGet("{id}", Name = "GetAsync")]
         public async Task<IActionResult> GetAsync(int id)
         {
@@ -60,7 +89,24 @@ namespace WX_53_Artisania.Publishing.Controllers
             return BadRequest();
         }
         
-        //POST: api/Customer
+        /// <summary>
+        /// Inicia sesión un cliente existente.
+        /// </summary>
+        /// <remarks>
+        /// Ejemplo de petición:
+        ///
+        ///     POST /api/clientes/login
+        ///     {
+        ///        "username": "johndoe",
+        ///        "password": "password123"
+        ///     }
+        ///
+        /// </remarks>
+        /// <param name="command">El comando de inicio de sesión.</param>
+        /// <returns>Un token de acceso si el inicio de sesión es exitoso.</returns>
+        /// <response code="200">Retorna el token de acceso recién creado.</response>
+        /// <response code="400">Si el comando es nulo o inválido.</response>
+        
         [AllowAnonymous]
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] SignInCommand command)
@@ -69,7 +115,27 @@ namespace WX_53_Artisania.Publishing.Controllers
             return Ok(result);
         }
         
-        //POST: api/Customer
+        /// <summary>
+        /// Registra un nuevo cliente.
+        /// </summary>
+        /// <remarks>
+        /// Ejemplo de petición:
+        ///
+        ///     POST /api/clientes/register
+        ///     {
+        ///        "usuario": "johndoe",
+        ///        "contraseña": "password123",
+        ///        "correo": "johndoe@example.com",
+        ///        "imagenUsuario": "http://example.com/image.jpg",
+        ///        "isArtisan": true,
+        ///        "role": "user"
+        ///     } 
+        ///
+        /// </remarks>
+        /// <param name="command">El comando de registro.</param>
+        /// <returns>Un token de acceso si el registro es exitoso.</returns>
+        /// <response code="200">Retorna el token de acceso recién creado.</response>
+        /// <response code="400">Si el comando es nulo o inválido.</response>
         [AllowAnonymous]
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody]SignUpCommand command)

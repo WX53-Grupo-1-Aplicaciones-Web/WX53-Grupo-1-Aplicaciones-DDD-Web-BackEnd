@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "W3y3SrpxX5t5rB0Mr7h17WPwqRQbxCoW/ujCw7oDtrTmTn1vmQaCHFhNwTmAgQV3utxAvYlEufACtJnqHV8RSQ==",
+  "dgSpecHash": "OkrnngkyPVyG1JxZmlMgNwNFBERbsuX5mDPw4KmTmyg4/zXmgVqwGbeyS4qsgh6TVw9THeU/qG1BFXUoqJZoFQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alessandro\\Desktop\\borrar\\WX-53 Artisania\\WX-53 Artisania\\Application\\Application.csproj",
+  "projectFilePath": "C:\\Users\\Alessandro\\RiderProjects\\DDD backend artisania\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alessandro\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Alessandro\\.nuget\\packages\\bcrypt.net\\0.1.0\\bcrypt.net.0.1.0.nupkg.sha512",
@@ -24,7 +24,10 @@
     "C:\\Users\\Alessandro\\.nuget\\packages\\microsoft.identitymodel.logging\\8.0.0-preview1\\microsoft.identitymodel.logging.8.0.0-preview1.nupkg.sha512",
     "C:\\Users\\Alessandro\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.0.0-preview1\\microsoft.identitymodel.tokens.8.0.0-preview1.nupkg.sha512",
     "C:\\Users\\Alessandro\\.nuget\\packages\\mysqlconnector\\2.2.5\\mysqlconnector.2.2.5.nupkg.sha512",
-    "C:\\Users\\Alessandro\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\7.0.0\\pomelo.entityframeworkcore.mysql.7.0.0.nupkg.sha512"
+    "C:\\Users\\Alessandro\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\7.0.0\\pomelo.entityframeworkcore.mysql.7.0.0.nupkg.sha512",
+    "C:\\Users\\Alessandro\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.17\\microsoft.netcore.app.ref.7.0.17.nupkg.sha512",
+    "C:\\Users\\Alessandro\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.17\\microsoft.windowsdesktop.app.ref.7.0.17.nupkg.sha512",
+    "C:\\Users\\Alessandro\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.17\\microsoft.aspnetcore.app.ref.7.0.17.nupkg.sha512"
   ],
   "logs": [
     {

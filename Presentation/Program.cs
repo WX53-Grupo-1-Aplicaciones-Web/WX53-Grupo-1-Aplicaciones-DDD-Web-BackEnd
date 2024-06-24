@@ -38,17 +38,17 @@ builder.Services.AddSwaggerGen(options =>
     {
         Version = "v1",
         Title = "Artisania API",
-        Description = "An ASP.NET Core Web API for managing API Resources",
-        TermsOfService = new Uri("https://example.com/terms"),
+        Description = "Artisania API - Grupo 1 - Aplicaciones Web",
+        TermsOfService = new Uri("https://artisania.azurewebsites.net/"),
         Contact = new OpenApiContact
         {
-            Name = "Example Contact",
-            Url = new Uri("https://example.com/contact")
+            Name = "Artisania - Landing Page",
+            Url = new Uri("https://wx53-grupo-1-aplicaciones-web.github.io/WX53-Grupo-1-Aplicaciones-Web-LandingPage/")
         },
         License = new OpenApiLicense
         {
-            Name = "Example License",
-            Url = new Uri("https://example.com/license")
+            Name = "Artisania Web Application",
+            Url = new Uri("https://grupo-1-artisania-deployment.web.app/")
         }
     });
     // using System.Reflection;

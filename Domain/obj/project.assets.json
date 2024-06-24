@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alessandro\\Desktop\\borrar\\WX-53 Artisania\\WX-53 Artisania\\Domain\\Domain.csproj",
+      "projectUniqueName": "C:\\Users\\Alessandro\\RiderProjects\\DDD backend artisania\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Domain\\Domain.csproj",
       "projectName": "Domain",
-      "projectPath": "C:\\Users\\Alessandro\\Desktop\\borrar\\WX-53 Artisania\\WX-53 Artisania\\Domain\\Domain.csproj",
+      "projectPath": "C:\\Users\\Alessandro\\RiderProjects\\DDD backend artisania\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Domain\\Domain.csproj",
       "packagesPath": "C:\\Users\\Alessandro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alessandro\\Desktop\\borrar\\WX-53 Artisania\\WX-53 Artisania\\Domain\\obj\\",
+      "outputPath": "C:\\Users\\Alessandro\\RiderProjects\\DDD backend artisania\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alessandro\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -56,12 +56,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.17, 7.0.17]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.17, 7.0.17]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[7.0.17, 7.0.17]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.408\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -739,11 +739,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alessandro\\Desktop\\borrar\\WX-53 Artisania\\WX-53 Artisania\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Alessandro\\RiderProjects\\DDD backend artisania\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "C:\\Users\\Alessandro\\Desktop\\borrar\\WX-53 Artisania\\WX-53 Artisania\\Infrastructure\\Infrastructure.csproj",
+      "projectPath": "C:\\Users\\Alessandro\\RiderProjects\\DDD backend artisania\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Infrastructure\\Infrastructure.csproj",
       "packagesPath": "C:\\Users\\Alessandro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alessandro\\Desktop\\borrar\\WX-53 Artisania\\WX-53 Artisania\\Infrastructure\\obj\\",
+      "outputPath": "C:\\Users\\Alessandro\\RiderProjects\\DDD backend artisania\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Alessandro\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -760,11 +760,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Alessandro\\Desktop\\borrar\\WX-53 Artisania\\WX-53 Artisania\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Alessandro\\Desktop\\borrar\\WX-53 Artisania\\WX-53 Artisania\\Domain\\Domain.csproj"
+            "C:\\Users\\Alessandro\\RiderProjects\\DDD backend artisania\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\Alessandro\\RiderProjects\\DDD backend artisania\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Domain\\Domain.csproj"
             },
-            "C:\\Users\\Alessandro\\Desktop\\borrar\\WX-53 Artisania\\WX-53 Artisania\\Shared\\Shared.csproj": {
-              "projectPath": "C:\\Users\\Alessandro\\Desktop\\borrar\\WX-53 Artisania\\WX-53 Artisania\\Shared\\Shared.csproj"
+            "C:\\Users\\Alessandro\\RiderProjects\\DDD backend artisania\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Shared\\Shared.csproj": {
+              "projectPath": "C:\\Users\\Alessandro\\RiderProjects\\DDD backend artisania\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Shared\\Shared.csproj"
             }
           }
         }
@@ -803,12 +803,26 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[7.0.17, 7.0.17]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[7.0.17, 7.0.17]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[7.0.17, 7.0.17]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.408\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
