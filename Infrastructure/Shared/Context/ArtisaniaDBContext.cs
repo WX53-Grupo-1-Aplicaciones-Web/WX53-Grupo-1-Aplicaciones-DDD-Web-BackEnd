@@ -1,4 +1,5 @@
 using Domain.Publishing.Models.Entities;
+using Domain.Publishing.Models.Entities.Orders;
 using Domain.Publishing.Models.Entities.Product;
 using Microsoft.EntityFrameworkCore;
 
@@ -21,6 +22,8 @@ public class ArtisaniaDBContext:DbContext
     public DbSet<Caracteristica> Caracteristicas { get; set; }
     public DbSet<Parametro> Parametros { get; set; }
     public DbSet<Imagen> Imagenes { get; set; } 
+    
+    public DbSet<Order> Orders { get; set; }
     
     
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -75,6 +78,15 @@ public class ArtisaniaDBContext:DbContext
             .WithOne()
             .HasForeignKey(i => i.ProductId);
         
+        builder.Entity<Order>().ToTable("Ordenes");
+        builder.Entity<Order>().HasKey(o => o.Id);
+        builder.Entity<Order>()
+            .HasMany(o => o.Parameters)
+            .WithOne()
+            .HasForeignKey(p => p.OrderId); 
+        
+        builder.Entity<OrderParameter>().ToTable("OrderParameters");
+        builder.Entity<OrderParameter>().HasKey(p => p.Id);
         
     }
 }

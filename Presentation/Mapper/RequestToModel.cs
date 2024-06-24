@@ -1,7 +1,9 @@
 using AutoMapper;
 using Domain.Publishing.Models.Commands.CustomerCommands;
+using Domain.Publishing.Models.Commands.OrderCommands;
 using Domain.Publishing.Models.Commands.ProductCommands;
 using Domain.Publishing.Models.Entities;
+using Domain.Publishing.Models.Entities.Orders;
 using Domain.Publishing.Models.Entities.Product;
 
 namespace WX_53_Artisania.Mapper;
@@ -25,5 +27,7 @@ public class RequestToModel:Profile
         CreateMap<ValorParametroCommand,ValorParametro>()
             .ForMember(dest => dest.Id, opt => opt.Ignore());;
 
+        CreateMap<CreateOrderCommand, Order>();
+        CreateMap<OrderParameterCommand, OrderParameter>();
     }
 }

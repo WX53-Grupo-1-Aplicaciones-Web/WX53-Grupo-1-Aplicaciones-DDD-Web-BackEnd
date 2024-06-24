@@ -1,11 +1,14 @@
 using System.Reflection;
 using Application.CommandServices.CustomerCommandService;
+using Application.CommandServices.OrderCommandService;
 using Application.CommandServices.ProductCommandService;
 using Application.QueryServices.CustomerQueryService;
+using Application.QueryServices.OrderQueryService;
 using Application.QueryServices.ProductQueryService;
 using Domain.Publishing.Models.Entities;
 using Domain.Publishing.Repositories;
 using Domain.Publishing.Services;
+using Domain.Publishing.Services.OrderServices;
 using Domain.Publishing.Services.ProductServices;
 using Infrastructure.Publishing.Persistence;
 using Infrastructure.Shared.Context;
@@ -60,6 +63,10 @@ builder.Services.AddScoped<ICustomerQueryService, CustomerQueryService>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProductCommandService, ProductCommandService>();
 builder.Services.AddScoped<IProductQueryService, ProductQueryServices>();
+
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+builder.Services.AddScoped<IOrderCommandService, OrderCommandService>();
+builder.Services.AddScoped<IOrderQueryService, OrderQueryService>();
 
 builder.Services.AddScoped<IEncryptService, EncryptCommandService>();
 builder.Services.AddScoped<ITokenService, TokenService>();

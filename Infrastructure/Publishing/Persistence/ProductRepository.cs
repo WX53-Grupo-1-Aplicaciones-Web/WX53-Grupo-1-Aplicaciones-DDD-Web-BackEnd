@@ -47,6 +47,12 @@ public class ProductRepository: IProductRepository
 
     public async Task<Product> GetByIdAsync(int id)
     {
-        return await _context.Products.Where(e => e.Id == id).FirstOrDefaultAsync();
+        return await _context.Products
+            .Include(p => p.ParametrosPersonalizacion)
+            .ThenInclude(pp => pp.Parametros)
+            .ThenInclude(p => p.Valores)
+            .Include(p => p.ImagenesDetalle)
+            .Include(p => p.Caracteristicas)
+            .FirstOrDefaultAsync(p => p.Id == id);
     }
 }

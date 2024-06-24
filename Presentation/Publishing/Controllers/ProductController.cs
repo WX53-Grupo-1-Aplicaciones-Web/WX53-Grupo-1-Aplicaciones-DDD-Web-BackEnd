@@ -36,7 +36,7 @@ namespace WX_53_Artisania.Publishing.Controllers
         }
 
         // GET: api/Product/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}", Name = "GetProduct")]
         public async Task<IActionResult> GetAsync(int id)
         {
             var result = await _productQueryService.Handle(new GetProductByIdQuery(id));

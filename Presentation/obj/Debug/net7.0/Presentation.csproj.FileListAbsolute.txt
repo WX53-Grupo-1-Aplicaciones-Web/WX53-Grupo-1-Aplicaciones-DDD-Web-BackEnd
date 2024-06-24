@@ -483,3 +483,13 @@ C:\Users\Alessandro\Desktop\borrar\WX-53 Artisania\WX-53 Artisania\Presentation\
 C:\Users\Alessandro\Desktop\borrar\WX-53 Artisania\WX-53 Artisania\Presentation\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\Alessandro\Desktop\borrar\WX-53 Artisania\WX-53 Artisania\Presentation\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\Alessandro\Desktop\borrar\WX-53 Artisania\WX-53 Artisania\Presentation\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Alessandro\Desktop\borrar\WX-53 Artisania\WX-53 Artisania\Presentation\bin\Debug\net7.0\Microsoft.ApplicationInsights.dll
+C:\Users\Alessandro\Desktop\borrar\WX-53 Artisania\WX-53 Artisania\Presentation\bin\Debug\net7.0\Microsoft.ApplicationInsights.AspNetCore.dll
+C:\Users\Alessandro\Desktop\borrar\WX-53 Artisania\WX-53 Artisania\Presentation\bin\Debug\net7.0\Microsoft.AI.DependencyCollector.dll
+C:\Users\Alessandro\Desktop\borrar\WX-53 Artisania\WX-53 Artisania\Presentation\bin\Debug\net7.0\Microsoft.AI.EventCounterCollector.dll
+C:\Users\Alessandro\Desktop\borrar\WX-53 Artisania\WX-53 Artisania\Presentation\bin\Debug\net7.0\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Alessandro\Desktop\borrar\WX-53 Artisania\WX-53 Artisania\Presentation\bin\Debug\net7.0\Microsoft.AI.WindowsServer.dll
+C:\Users\Alessandro\Desktop\borrar\WX-53 Artisania\WX-53 Artisania\Presentation\bin\Debug\net7.0\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Alessandro\Desktop\borrar\WX-53 Artisania\WX-53 Artisania\Presentation\bin\Debug\net7.0\Microsoft.Extensions.Logging.ApplicationInsights.dll
+C:\Users\Alessandro\Desktop\borrar\WX-53 Artisania\WX-53 Artisania\Presentation\bin\Debug\net7.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\Alessandro\Desktop\borrar\WX-53 Artisania\WX-53 Artisania\Presentation\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll

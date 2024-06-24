@@ -1,7 +1,9 @@
 using AutoMapper;
 using Domain.Publishing.Models.Entities;
+using Domain.Publishing.Models.Entities.Orders;
 using Domain.Publishing.Models.Entities.Product;
 using Domain.Publishing.Models.Response;
+using Domain.Publishing.Models.Response.OrderResponse;
 
 namespace WX_53_Artisania.Middleware;
 
@@ -19,5 +21,8 @@ public class ModelToResponse:Profile
         CreateMap<ValorParametro, ValorParametroResponse>();
         CreateMap<Imagen, ImagenResponse>();
         CreateMap<Caracteristica, CaracteristicaResponse>();
+
+        CreateMap<Order, OrderResponse>();
+        CreateMap<OrderParameter, OrderParametersResponse>();
     }
 }
