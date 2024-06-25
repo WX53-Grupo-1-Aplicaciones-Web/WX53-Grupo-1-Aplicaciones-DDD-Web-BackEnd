@@ -1,6 +1,7 @@
 using Application.CommandServices.OrderCommandService;
 using AutoMapper;
 using Domain.Publishing.Models.Commands.OrderCommands;
+using Domain.Publishing.Models.Entities.Orders;
 using Domain.Publishing.Models.Entities.Product;
 using Domain.Publishing.Repositories;
 using Moq;
@@ -54,6 +55,29 @@ namespace Domain.test
 
             // Assert
             Assert.Equal(100m + 100m * Shared.GlobalConstants.AUGMENT_PERCENT* 2, command.Price);
+        }
+        [Fact]
+        public async Task Handle_ShouldIncreasePrice_WhenParameterValuesAreRepeated()
+        {
+            // Arrange
+            _orderRepositoryMock.Setup(repo => repo.GetRepeatedParameterValuesCount(It.IsAny<string>(), It.IsAny<List<OrderParameter>>()))
+                .ReturnsAsync(4);
+
+            var command = new CreateOrderCommand
+            {
+                ProductId = "test",
+                Price = 100,
+                Parameters = new List<OrderParameterCommand>
+                {
+                    new OrderParameterCommand { ParamName = "test", ParamValue = "test" }
+                }
+            };
+
+            // Act
+            await _orderCommandService.Handle(command);
+
+            // Assert
+            Assert.Equal(105, command.Price);
         }
     }
 }

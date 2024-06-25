@@ -33,10 +33,14 @@ public class OrderCommandService:IOrderCommandService
         else
         {
         }
+        var parameters = _mapper.Map<List<OrderParameter>>(command.Parameters);
+
+        var repeatedParameterValuesCount = await _orderRepository.GetRepeatedParameterValuesCount(command.ProductId, parameters);
+        if (repeatedParameterValuesCount >= 4)
+        {
+            command.Price += Shared.GlobalConstants.AUGMENT_REPEATED_PARAMETER;
+        }
         
-        // REGLA DE NEGOCIO:
-        // Aumentamos el precio del producto en un 0.3% por cada vez que ha sido ordenado.
-        // Esto se hace para incentivar la diversificación de los productos que se compran y evitar que siempre se compren los mismos productos.
         var orderCount = await _orderRepository.GetOrderCountForProduct(command.ProductId);
 
         command.Price += command.Price * Shared.GlobalConstants.AUGMENT_PERCENT * orderCount;

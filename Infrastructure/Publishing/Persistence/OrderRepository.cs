@@ -56,4 +56,12 @@ public class OrderRepository: IOrderRepository
     {
         return await _context.Orders.CountAsync(o => o.ProductId == productId);
     }
+    
+    public async Task<int> GetRepeatedParameterValuesCount(string productId, List<OrderParameter> parameters)
+    {
+        var parameterValues = parameters.Select(p => p.ParamValue).ToList();
+        return await _context.Orders
+            .Where(o => o.ProductId == productId && o.Parameters.Any(p => parameterValues.Contains(p.ParamValue)))
+            .CountAsync();
+    }
 }

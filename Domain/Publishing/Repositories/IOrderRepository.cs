@@ -8,6 +8,7 @@ public interface IOrderRepository
     Task<List<Order>> GetAllAsync();
     Task<Order> GetByIdAsync(int id);
     Task<int> GetOrderCountForProduct(string productId);
-
+    
+    Task<int> GetRepeatedParameterValuesCount(string productId, List<OrderParameter> parameters);
 
 }
