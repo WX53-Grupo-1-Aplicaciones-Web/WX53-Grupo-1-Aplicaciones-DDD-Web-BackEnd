@@ -1,16 +1,21 @@
 using System.Reflection;
 using Application.CommandServices.CustomerCommandService;
 using Application.CommandServices.OrderCommandService;
+using Application.CommandServices.ProductCharacteristicsCommandService;
 using Application.CommandServices.ProductCommandService;
 using Application.QueryServices.CustomerQueryService;
 using Application.QueryServices.OrderQueryService;
+using Application.QueryServices.ProductCharacteristicsQueryService;
 using Application.QueryServices.ProductQueryService;
 using Domain.Publishing.Models.Entities;
 using Domain.Publishing.Repositories;
+using Domain.Publishing.Repositories.ProductsCharacteristics;
 using Domain.Publishing.Services;
 using Domain.Publishing.Services.OrderServices;
+using Domain.Publishing.Services.ProductsCharacteristics;
 using Domain.Publishing.Services.ProductServices;
 using Infrastructure.Publishing.Persistence;
+using Infrastructure.Publishing.Persistence.ProductsCharacteristics;
 using Infrastructure.Shared.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -70,6 +75,10 @@ builder.Services.AddScoped<IOrderQueryService, OrderQueryService>();
 
 builder.Services.AddScoped<IEncryptService, EncryptCommandService>();
 builder.Services.AddScoped<ITokenService, TokenService>();
+
+builder.Services.AddScoped<IProductsCharacteristicsRepository, ProductsCharacteristicsRepository>();
+builder.Services.AddScoped<IProductsCharacteristicsCommandService, ProductCharacteristicsCommandService>();
+builder.Services.AddScoped<IProductsCharacteristicsQueryService, ProductCharacteristicsQueryService>();
 
 builder.Services.AddAutoMapper(typeof(RequestToModel), typeof(ModelToRequest), typeof(ModelToResponse));
 
