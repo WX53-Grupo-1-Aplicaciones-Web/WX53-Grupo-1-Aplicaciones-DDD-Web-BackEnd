@@ -5,6 +5,7 @@ using Domain.Publishing.Models.Commands.ProductCommands;
 using Domain.Publishing.Models.Entities;
 using Domain.Publishing.Models.Entities.Orders;
 using Domain.Publishing.Models.Entities.Product;
+using Domain.Publishing.Models.Entities.ProductsCharacteristics;
 
 namespace WX_53_Artisania.Mapper;
 
@@ -29,5 +30,7 @@ public class RequestToModel:Profile
 
         CreateMap<CreateOrderCommand, Order>();
         CreateMap<OrderParameterCommand, OrderParameter>();
+        CreateMap<CreateProductsCharacteristicsCommand, ProductsCharacteristics>();
+
     }
 }
