@@ -95,11 +95,12 @@ using (var context = scope.ServiceProvider.GetService<ArtisaniaDBContext>())
     context.Database.EnsureCreated();
 }
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Artisania API v1");
+    c.RoutePrefix = "swagger";  
+});
 app.UseCors("AllowAllPolicy");
 //app.UseMiddleware<AuthenticationMiddlleware>();
 app.UseHttpsRedirection();
