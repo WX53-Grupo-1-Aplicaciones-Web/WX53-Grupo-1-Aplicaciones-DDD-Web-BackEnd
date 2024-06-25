@@ -13,12 +13,12 @@ using Microsoft.AspNetCore.Mvc;
 namespace WX_53_Artisania.Publishing.Controllers
 {
     /// <summary>
-    /// Controlador para gestionar las operaciones de los clientes.
+    /// Controller to manage customer operations.
     /// </summary>
     /// <remarks>
-    /// Proporciona endpoints para obtener todos los clientes, obtener un cliente por su ID, crear un nuevo cliente, iniciar sesión, registrar y actualizar la información del cliente.
+    /// Provides endpoints to get all customers, get a customer by its ID, create a new customer, log in, register and update customer information.
     /// </remarks>
-    [Route("api/clientes")]
+    [Route("api/customers")]
     [ApiController]
     public class CustomerController : ControllerBase
     {
@@ -37,17 +37,17 @@ namespace WX_53_Artisania.Publishing.Controllers
         
         
         /// <summary>
-        /// Obtiene todos los clientes.
+        /// Gets all customers.
         /// </summary>
         /// <remarks>
-        /// Ejemplo de petición:
+        /// Request example:
         ///
-        ///     GET /api/clientes
+        ///     GET /api/customers
         ///
         /// </remarks>
-        /// <returns>Una lista de clientes si se encuentran.</returns>
-        /// <response code="200">Retorna la lista de clientes.</response>
-        /// <response code="404">Si no se encuentran clientes.</response>
+        /// <returns>A list of customers if found.</returns>
+        /// <response code="200">Returns the list of customers.</response>
+        /// <response code="404">If no customers are found.</response>
         [HttpGet]
         public async Task<IActionResult> GetAsync()
         {
@@ -57,18 +57,18 @@ namespace WX_53_Artisania.Publishing.Controllers
         }
 
         /// <summary>
-        /// Obtiene un cliente por su ID.
+        /// Gets a customer by their ID.
         /// </summary>
         /// <remarks>
-        /// Ejemplo de petición:
+        /// Request example:
         ///
-        ///     GET /api/clientes/{id}
+        ///     GET /api/customers/{id}
         ///
         /// </remarks>
-        /// <param name="id">El ID del cliente.</param>
-        /// <returns>Los detalles del cliente si se encuentra.</returns>
-        /// <response code="200">Retorna los detalles del cliente.</response>
-        /// <response code="404">Si el cliente no se encuentra.</response>
+        /// <param name="id">The ID of the customer.</param>
+        /// <returns>The details of the customer if found.</returns>
+        /// <response code="200">Returns the customer details.</response>
+        /// <response code="404">If the customer is not found.</response>
         [HttpGet("{id}", Name = "GetAsync")]
         public async Task<IActionResult> GetAsync(int id)
         {
@@ -76,36 +76,24 @@ namespace WX_53_Artisania.Publishing.Controllers
             if (result == null) return NotFound();
             return Ok(result);
         }
-
-        // POST: api/Customer
-        [HttpPost("create"),]
-        public async Task<IActionResult> PostAsync([FromBody] CreateCustomerCommand command)
-        {
-            if (!ModelState.IsValid) return BadRequest();
-            var result = await _customerCommandService.Handle(command);
-            if (result > 0)
-                return StatusCode(StatusCodes.Status201Created, result);
-
-            return BadRequest();
-        }
         
         /// <summary>
-        /// Inicia sesión un cliente existente.
+        /// Logs in an existing customer.
         /// </summary>
         /// <remarks>
-        /// Ejemplo de petición:
+        /// Request example:
         ///
-        ///     POST /api/clientes/login
+        ///     POST /api/customers/login
         ///     {
         ///        "username": "johndoe",
         ///        "password": "password123"
         ///     }
         ///
         /// </remarks>
-        /// <param name="command">El comando de inicio de sesión.</param>
-        /// <returns>Un token de acceso si el inicio de sesión es exitoso.</returns>
-        /// <response code="200">Retorna el token de acceso recién creado.</response>
-        /// <response code="400">Si el comando es nulo o inválido.</response>
+        /// <param name="command">The login command.</param>
+        /// <returns>An access token if the login is successful.</returns>
+        /// <response code="200">Returns the newly created access token.</response>
+        /// <response code="400">If the command is null or invalid.</response>
         
         [AllowAnonymous]
         [HttpPost("login")]
@@ -116,26 +104,26 @@ namespace WX_53_Artisania.Publishing.Controllers
         }
         
         /// <summary>
-        /// Registra un nuevo cliente.
+        /// Registers a new customer.
         /// </summary>
         /// <remarks>
-        /// Ejemplo de petición:
+        /// Request example:
         ///
-        ///     POST /api/clientes/register
+        ///     POST /api/customers/register
         ///     {
-        ///        "usuario": "johndoe",
-        ///        "contraseña": "password123",
-        ///        "correo": "johndoe@example.com",
-        ///        "imagenUsuario": "http://example.com/image.jpg",
+        ///        "username": "johndoe",
+        ///        "password": "password123",
+        ///        "email": "johndoe@example.com",
+        ///        "userImage": "http://example.com/image.jpg",
         ///        "isArtisan": true,
         ///        "role": "user"
         ///     } 
         ///
         /// </remarks>
-        /// <param name="command">El comando de registro.</param>
-        /// <returns>Un token de acceso si el registro es exitoso.</returns>
-        /// <response code="200">Retorna el token de acceso recién creado.</response>
-        /// <response code="400">Si el comando es nulo o inválido.</response>
+        /// <param name="command">The registration command.</param>
+        /// <returns>An access token if the registration is successful.</returns>
+        /// <response code="200">Returns the newly created access token.</response>
+        /// <response code="400">If the command is null or invalid.</response>
         [AllowAnonymous]
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody]SignUpCommand command)
@@ -148,36 +136,6 @@ namespace WX_53_Artisania.Publishing.Controllers
             return Ok(result);
         }
         
-        
-        // PUT: api/Customer/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutAsync(int id, [FromBody] UpdateCustomerCommand command)
-        {
-            command.Id = id;
-            if (!ModelState.IsValid) return StatusCode(StatusCodes.Status400BadRequest);
-
-            var result = await _customerCommandService.Handle(command); 
-            
-            if (result)
-                return Ok();
-            else
-                return BadRequest();
-        }
-        
-        // PUT: api/Customer/5/password
-        [HttpPut("{id}/password")]
-        public async Task<IActionResult> UpdatePasswordAsync(int id, [FromBody] UpdateCustomerPasswordCommand command)
-        {
-            command.Id = id;
-            if (!ModelState.IsValid) return StatusCode(StatusCodes.Status400BadRequest);
-
-            var result = await _customerCommandService.Handle(command);
-
-            if (result)
-                return Ok();
-            else
-                return BadRequest();
-        }
         
     }
 }

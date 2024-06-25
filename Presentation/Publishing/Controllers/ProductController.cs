@@ -12,12 +12,12 @@ using Microsoft.AspNetCore.Mvc;
 namespace WX_53_Artisania.Publishing.Controllers
 {
     /// <summary>
-    /// Controlador para gestionar las operaciones de los productos.
+    /// Controller to manage product operations.
     /// </summary>
     /// <remarks>
-    /// Proporciona endpoints para obtener todos los productos, obtener un producto por su ID y crear un nuevo producto.
+    /// Provides endpoints to get all products, get a product by its ID, and create a new product.
     /// </remarks>
-    [Route("api/productos")]
+    [Route("api/products")]
     [ApiController]
     public class ProductController : ControllerBase
     {
@@ -34,17 +34,17 @@ namespace WX_53_Artisania.Publishing.Controllers
         }
         // GET: api/Product
         /// <summary>
-        /// Obtiene todos los productos.
+        /// Gets all products.
         /// </summary>
         /// <remarks>
-        /// Ejemplo de petición:
+        /// Request example:
         ///
-        ///     GET /api/productos
+        ///     GET /api/products
         ///
         /// </remarks>
-        /// <returns>Una lista de productos si se encuentran.</returns>
-        /// <response code="200">Retorna la lista de productos.</response>
-        /// <response code="404">Si no se encuentran productos.</response>
+        /// <returns>A list of products if found.</returns>
+        /// <response code="200">Returns the list of products.</response>
+        /// <response code="404">If no products are found.</response>
         [HttpGet]
         public async Task<IActionResult> GetAsync()
         {
@@ -55,18 +55,18 @@ namespace WX_53_Artisania.Publishing.Controllers
 
         // GET: api/Product/5
         /// <summary>
-        /// Obtiene un producto por su ID.
+        /// Gets a product by its ID.
         /// </summary>
         /// <remarks>
-        /// Ejemplo de petición:
+        /// Request example:
         ///
-        ///     GET /api/productos/{id}
+        ///     GET /api/products/{id}
         ///
         /// </remarks>
-        /// <param name="id">El ID del producto.</param>
-        /// <returns>Los detalles del producto si se encuentra.</returns>
-        /// <response code="200">Retorna los detalles del producto.</response>
-        /// <response code="404">Si el producto no se encuentra.</response>
+        /// <param name="id">The ID of the product.</param>
+        /// <returns>The details of the product if found.</returns>
+        /// <response code="200">Returns the product details.</response>
+        /// <response code="404">If the product is not found.</response>
         [HttpGet("{id}", Name = "GetProduct")]
         public async Task<IActionResult> GetAsync(int id)
         {
@@ -77,55 +77,55 @@ namespace WX_53_Artisania.Publishing.Controllers
 
         // POST: api/Product
         /// <summary>
-        /// Crea un nuevo producto.
+        /// Creates a new product.
         /// </summary>
         /// <remarks>
-        /// Ejemplo de petición:
+        /// Request example:
         ///
-        ///     POST /api/productos/create
+        ///     POST /api/products/create
         ///     {
-        ///        "nombre": "Producto",
-        ///        "descripcion": "Descripción del producto",
-        ///        "precio": 100.0,
-        ///        "detalles": "Detalles del producto",
-        ///        "detallesDelArtesano": "Detalles del artesano",
-        ///        "parametrosPersonalizacion": {
-        ///          "parametros": [
+        ///        "name": "Product",
+        ///        "description": "Product description",
+        ///        "price": 100.0,
+        ///        "details": "Product details",
+        ///        "artisanDetails": "Artisan details",
+        ///        "customizationParameters": {
+        ///          "parameters": [
         ///            {
-        ///              "nombre": "Color",
-        ///              "valores": [
+        ///              "name": "Color",
+        ///              "values": [
         ///                {
-        ///                  "valor": "Rojo"
+        ///                  "value": "Red"
         ///                }
         ///              ]
         ///            }
         ///          ],
-        ///          "gravado": "Gravado personalizado"
+        ///          "engraving": "Custom engraving"
         ///        },
-        ///        "tamaño": 10.0,
-        ///        "inputText": "Texto de entrada",
-        ///        "gravado": "Gravado del producto",
-        ///        "categoria": "Categoría del producto",
-        ///        "imagen": "http://example.com/image.jpg",
-        ///        "imagenesDetalle": [
+        ///        "size": 10.0,
+        ///        "inputText": "Input text",
+        ///        "engraving": "Product engraving",
+        ///        "category": "Product category",
+        ///        "image": "http://example.com/image.jpg",
+        ///        "detailImages": [
         ///          {
-        ///            "imagenUrl": "http://example.com/detail_image.jpg"
+        ///            "imageUrl": "http://example.com/detail_image.jpg"
         ///          }
         ///        ],
-        ///        "autor": "Autor del producto",
-        ///        "caracteristicas": [
+        ///        "author": "Product author",
+        ///        "features": [
         ///          {
-        ///            "nombre": "Material",
-        ///            "valor": "Madera"
+        ///            "name": "Material",
+        ///            "value": "Wood"
         ///          }
         ///        ]
         ///     }
         ///
         /// </remarks>
-        /// <param name="command">El comando para crear un producto.</param>
-        /// <returns>El ID del producto creado si la creación es exitosa.</returns>
-        /// <response code="201">Retorna el ID del producto recién creado.</response>
-        /// <response code="400">Si el comando es nulo o inválido.</response>
+        /// <param name="command">The command to create a product.</param>
+        /// <returns>The ID of the created product if the creation is successful.</returns>
+        /// <response code="201">Returns the ID of the newly created product.</response>
+        /// <response code="400">If the command is null or invalid.</response>
         [HttpPost("create")]
         public async Task<IActionResult> PostAsync([FromBody] CreateProductCommand command)
         {

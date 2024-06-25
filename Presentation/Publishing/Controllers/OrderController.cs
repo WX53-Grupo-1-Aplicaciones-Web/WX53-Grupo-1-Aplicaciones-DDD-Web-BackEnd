@@ -12,12 +12,12 @@ using Microsoft.AspNetCore.Mvc;
 namespace WX_53_Artisania.Publishing.Controllers
 {
     /// <summary>
-    /// Controlador para gestionar las operaciones de las órdenes.
+    /// Controller to manage order operations.
     /// </summary>
     /// <remarks>
-    /// Proporciona endpoints para obtener todas las órdenes, obtener una orden por su ID y crear una nueva orden.
+    /// Provides endpoints to get all orders, get an order by its ID, and create a new order.
     /// </remarks>
-    [Route("api/ordenes")]
+    [Route("api/orders")]
     [ApiController]
     public class OrderController : ControllerBase
     {
@@ -32,19 +32,19 @@ namespace WX_53_Artisania.Publishing.Controllers
             _orderQueryService = orderQueryService;
             _mapper = mapper;
         }
-        // GET: api/ordenes
+        // GET: api/orders
         /// <summary>
-        /// Obtiene todas las órdenes.
+        /// Gets all orders.
         /// </summary>
         /// <remarks>
-        /// Ejemplo de petición:
+        /// Request example:
         ///
-        ///     GET /api/ordenes
+        ///     GET /api/orders
         ///
         /// </remarks>
-        /// <returns>Una lista de órdenes si se encuentran.</returns>
-        /// <response code="200">Retorna la lista de órdenes.</response>
-        /// <response code="404">Si no se encuentran órdenes.</response>
+        /// <returns>A list of orders if found.</returns>
+        /// <response code="200">Returns the list of orders.</response>
+        /// <response code="404">If no orders are found.</response>
         [HttpGet]
         public async Task<IActionResult> GetAsync()
         {
@@ -53,20 +53,20 @@ namespace WX_53_Artisania.Publishing.Controllers
             return Ok(result);
         }
 
-        // GET: api/ordenes/5
+        // GET: api/orders/5
         /// <summary>
-        /// Obtiene una orden por su ID.
+        /// Gets an order by its ID.
         /// </summary>
         /// <remarks>
-        /// Ejemplo de petición:
+        /// Request example:
         ///
-        ///     GET /api/ordenes/{id}
+        ///     GET /api/orders/{id}
         ///
         /// </remarks>
-        /// <param name="id">El ID de la orden.</param>
-        /// <returns>Los detalles de la orden si se encuentra.</returns>
-        /// <response code="200">Retorna los detalles de la orden.</response>
-        /// <response code="404">Si la orden no se encuentra.</response>
+        /// <param name="id">The ID of the order.</param>
+        /// <returns>The details of the order if found.</returns>
+        /// <response code="200">Returns the order details.</response>
+        /// <response code="404">If the order is not found.</response>
         [HttpGet("{id}", Name = "GetOrder")]
         public async Task<IActionResult> GetAsync(int id)
         {
@@ -75,14 +75,14 @@ namespace WX_53_Artisania.Publishing.Controllers
             return Ok(result);
         }
 
-        // POST: api/ordenes/create
+        // POST: api/orders/create
         /// <summary>
-        /// Crea una nueva orden.
+        /// Creates a new order.
         /// </summary>
         /// <remarks>
-        /// Ejemplo de petición:
+        /// Request example:
         ///
-        ///     POST /api/ordenes/create
+        ///     POST /api/orders/create
         ///     {
         ///        "productId": "123",
         ///        "product": "Product Name",
@@ -96,10 +96,10 @@ namespace WX_53_Artisania.Publishing.Controllers
         ///     }
         ///
         /// </remarks>
-        /// <param name="command">El comando para crear una orden.</param>
-        /// <returns>El ID de la orden creada si la creación es exitosa.</returns>
-        /// <response code="201">Retorna el ID de la orden recién creada.</response>
-        /// <response code="400">Si el comando es nulo o inválido.</response>
+        /// <param name="command">The command to create an order.</param>
+        /// <returns>The ID of the created order if the creation is successful.</returns>
+        /// <response code="201">Returns the ID of the newly created order.</response>
+        /// <response code="400">If the command is null or invalid.</response>
         [HttpPost("create")]
         public async Task<IActionResult> PostAsync([FromBody] CreateOrderCommand command)
         {
