@@ -9,5 +9,5 @@ public interface IProductnewRepository
     Task<Productnew> GetByIdAsync(int id);
     Task<bool> UpdateAsync(Productnew productnew);
     Task<bool> UpdatePriceAsync(decimal price, int id);
-    //Task<bool> DeleteAsync(int id);
+    Task<bool> DeleteAsync(int id);
 }
