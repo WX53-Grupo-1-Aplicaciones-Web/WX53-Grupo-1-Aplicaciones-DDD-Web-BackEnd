@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "DI+Ia+dqQ9dVB/yVgu6So3t+AWP9UuyP6k9tfAlduxOJGFmFIiuDZWdkszg1c02OIIC0ALveZLS+25kx4Zsgkg==",
+  "dgSpecHash": "K+wPTz5MDn1mItAc5eOJf/U+bMJNEBJiacBZXIvCr4d/3alJNTTqxuFP/zbopOMz7O9FwWwsK5giG421D9x5tA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alessandro\\RiderProjects\\DDD backend artisania\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Shared\\Shared.csproj",
+  "projectFilePath": "D:\\Escritorio\\Universidad\\ciclo8\\AppWeb\\semana15\\Anderson2\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Shared\\Shared.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Alessandro\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.17\\microsoft.netcore.app.ref.7.0.17.nupkg.sha512",
-    "C:\\Users\\Alessandro\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.17\\microsoft.windowsdesktop.app.ref.7.0.17.nupkg.sha512",
-    "C:\\Users\\Alessandro\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.17\\microsoft.aspnetcore.app.ref.7.0.17.nupkg.sha512"
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.19\\microsoft.netcore.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.19\\microsoft.windowsdesktop.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.19\\microsoft.aspnetcore.app.ref.7.0.19.nupkg.sha512"
   ],
   "logs": []
 }

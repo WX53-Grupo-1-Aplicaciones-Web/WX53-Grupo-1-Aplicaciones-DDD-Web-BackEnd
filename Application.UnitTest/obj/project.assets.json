@@ -12982,19 +12982,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alessandro\\.nuget\\packages\\": {}
+    "C:\\Users\\HP\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alessandro\\RiderProjects\\DDD backend artisania\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Application.UnitTest\\Application.UnitTest.csproj",
+      "projectUniqueName": "D:\\Escritorio\\Universidad\\ciclo8\\AppWeb\\semana15\\Anderson2\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Application.UnitTest\\Application.UnitTest.csproj",
       "projectName": "Application.UnitTest",
-      "projectPath": "C:\\Users\\Alessandro\\RiderProjects\\DDD backend artisania\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Application.UnitTest\\Application.UnitTest.csproj",
-      "packagesPath": "C:\\Users\\Alessandro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alessandro\\RiderProjects\\DDD backend artisania\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Application.UnitTest\\obj\\",
+      "projectPath": "D:\\Escritorio\\Universidad\\ciclo8\\AppWeb\\semana15\\Anderson2\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Application.UnitTest\\Application.UnitTest.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "D:\\Escritorio\\Universidad\\ciclo8\\AppWeb\\semana15\\Anderson2\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Application.UnitTest\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Alessandro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -13008,14 +13008,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Alessandro\\RiderProjects\\DDD backend artisania\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Application\\Application.csproj": {
-              "projectPath": "C:\\Users\\Alessandro\\RiderProjects\\DDD backend artisania\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Application\\Application.csproj"
+            "D:\\Escritorio\\Universidad\\ciclo8\\AppWeb\\semana15\\Anderson2\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Application\\Application.csproj": {
+              "projectPath": "D:\\Escritorio\\Universidad\\ciclo8\\AppWeb\\semana15\\Anderson2\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Application\\Application.csproj"
             },
-            "C:\\Users\\Alessandro\\RiderProjects\\DDD backend artisania\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Alessandro\\RiderProjects\\DDD backend artisania\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Domain\\Domain.csproj"
+            "D:\\Escritorio\\Universidad\\ciclo8\\AppWeb\\semana15\\Anderson2\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\Escritorio\\Universidad\\ciclo8\\AppWeb\\semana15\\Anderson2\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Domain\\Domain.csproj"
             },
-            "C:\\Users\\Alessandro\\RiderProjects\\DDD backend artisania\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Presentation\\Presentation.csproj": {
-              "projectPath": "C:\\Users\\Alessandro\\RiderProjects\\DDD backend artisania\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Presentation\\Presentation.csproj"
+            "D:\\Escritorio\\Universidad\\ciclo8\\AppWeb\\semana15\\Anderson2\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Presentation\\Presentation.csproj": {
+              "projectPath": "D:\\Escritorio\\Universidad\\ciclo8\\AppWeb\\semana15\\Anderson2\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Presentation\\Presentation.csproj"
             }
           }
         }
@@ -13069,15 +13069,15 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.17, 7.0.17]"
+            "version": "[7.0.19, 7.0.19]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[7.0.17, 7.0.17]"
+            "version": "[7.0.19, 7.0.19]"
           },
           {
             "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[7.0.17, 7.0.17]"
+            "version": "[7.0.19, 7.0.19]"
           }
         ],
         "frameworkReferences": {
@@ -13085,7 +13085,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\HP\\.dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   },
