@@ -17,6 +17,6 @@ public class ProductnewResponse
     public string Category { get; set; }
     public string Image { get; set; }
     public List<string> DetailImages { get; set; }
-    //public string Author { get; set; }
+    public string Author { get; set; }
     public List<ProductFeature> Characteristics { get; set; }
 }
