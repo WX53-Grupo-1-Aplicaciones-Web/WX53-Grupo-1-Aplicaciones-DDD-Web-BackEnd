@@ -53,7 +53,7 @@ namespace Domain.test
             var result = await _orderCommandService.Handle(command);
 
             // Assert
-            Assert.Equal(100m + 100m * 0.003m * 2, command.Price);
+            Assert.Equal(100m + 100m * Shared.GlobalConstants.AUGMENT_PERCENT* 2, command.Price);
         }
     }
 }

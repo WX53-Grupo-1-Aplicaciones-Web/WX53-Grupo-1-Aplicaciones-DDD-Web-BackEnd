@@ -39,7 +39,7 @@ public class OrderCommandService:IOrderCommandService
         // Esto se hace para incentivar la diversificación de los productos que se compran y evitar que siempre se compren los mismos productos.
         var orderCount = await _orderRepository.GetOrderCountForProduct(command.ProductId);
 
-        command.Price += command.Price * 0.003m * orderCount;
+        command.Price += command.Price * Shared.GlobalConstants.AUGMENT_PERCENT * orderCount;
 
         var order = _mapper.Map<CreateOrderCommand, Order>(command);
         return await _orderRepository.SaveAsync(order);

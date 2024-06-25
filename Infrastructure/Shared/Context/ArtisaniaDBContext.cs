@@ -31,7 +31,7 @@ public class ArtisaniaDBContext:DbContext
         if (!optionsBuilder.IsConfigured)
         {
             var serVersion = new MySqlServerVersion(new Version(8, 0, 29));
-            optionsBuilder.UseMySql("Server=localhost,3306;Uid=root;pwd=12345678;Database=Artisania", serVersion);
+            optionsBuilder.UseMySql("Server=sql10.freesqldatabase.com;Database=sql10715870;Uid=sql10715870;Pwd=NnYcAvf6AM;Port=3306;", serVersion);
         }
     }
     
