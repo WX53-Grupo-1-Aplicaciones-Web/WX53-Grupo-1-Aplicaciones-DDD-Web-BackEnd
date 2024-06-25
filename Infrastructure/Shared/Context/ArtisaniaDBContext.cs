@@ -1,6 +1,7 @@
 using Domain.Publishing.Models.Entities;
 using Domain.Publishing.Models.Entities.Orders;
 using Domain.Publishing.Models.Entities.Product;
+using Domain.Publishing.Models.Entities.ProductsCharacteristics;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Shared.Context;
@@ -22,6 +23,12 @@ public class ArtisaniaDBContext:DbContext
     public DbSet<Caracteristica> Caracteristicas { get; set; }
     public DbSet<Parametro> Parametros { get; set; }
     public DbSet<Imagen> Imagenes { get; set; } 
+    
+    public DbSet<ProductsCharacteristics> ProductsCharacteristics { get; set; }
+    public DbSet<Color> Colors { get; set; }
+    public DbSet<Size> Sizes { get; set; }
+    public DbSet<Material> Materials { get; set; }
+    public DbSet<Category> Categories { get; set; }
     
     public DbSet<Order> Orders { get; set; }
     
@@ -88,5 +95,20 @@ public class ArtisaniaDBContext:DbContext
         builder.Entity<OrderParameter>().ToTable("OrderParameters");
         builder.Entity<OrderParameter>().HasKey(p => p.Id);
         
+        builder.Entity<ProductsCharacteristics>()
+            .HasMany(p => p.Colors)
+            .WithMany();
+
+        builder.Entity<ProductsCharacteristics>()
+            .HasMany(p => p.Sizes)
+            .WithMany();
+
+        builder.Entity<ProductsCharacteristics>()
+            .HasMany(p => p.Materials)
+            .WithMany();
+
+        builder.Entity<ProductsCharacteristics>()
+            .HasMany(p => p.Categories)
+            .WithMany();
     }
 }
