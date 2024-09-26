@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DI+Ia+dqQ9dVB/yVgu6So3t+AWP9UuyP6k9tfAlduxOJGFmFIiuDZWdkszg1c02OIIC0ALveZLS+25kx4Zsgkg==",
+  "dgSpecHash": "po1ZUdDPqLT58yvSx3pERYn5wpIMHIE7CZrmPFgThHo/a6LAm56tiRHsKv7BdhmXNYwxKseI4wC/sKP+a/Hb8Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alessandro\\RiderProjects\\DDD backend artisania\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Shared\\Shared.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Alessandro\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.17\\microsoft.netcore.app.ref.7.0.17.nupkg.sha512",
-    "C:\\Users\\Alessandro\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.17\\microsoft.windowsdesktop.app.ref.7.0.17.nupkg.sha512",
-    "C:\\Users\\Alessandro\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.17\\microsoft.aspnetcore.app.ref.7.0.17.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\USER\\Desktop\\TF app web\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Shared\\Shared.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
