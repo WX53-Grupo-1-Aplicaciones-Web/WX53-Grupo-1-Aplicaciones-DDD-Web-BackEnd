@@ -136,6 +136,45 @@ namespace WX_53_Artisania.Publishing.Controllers
             return Ok(result);
         }
         
+        /// <summary>
+        /// Updates an existing customer.
+        /// </summary>
+        /// <remarks>
+        /// Request example:
+        ///
+        ///     PUT /api/customers/{id}
+        ///     {
+        ///        "username": "johndoe",
+        ///        "email": "johndoe@example.com",
+        ///        "userImage": "http://example.com/image.jpg",
+        ///        "isArtisan": true,
+        ///        "role": "user"
+        ///     }
+        ///
+        /// </remarks>
+        /// <param name="id">The ID of the customer to update.</param>
+        /// <param name="command">The update command.</param>
+        /// <returns>No content if the update is successful.</returns>
+        /// <response code="204">If the update is successful.</response>
+        /// <response code="400">If the command is null or invalid.</response>
+        /// <response code="404">If the customer is not found.</response>
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateAsync(int id, [FromBody] UpdateCustomerCommand command)
+        {
+            if (command == null)
+            {
+                return BadRequest();
+            }
+
+            var result = await _customerCommandService.Handle(id, command);
+            if (!result)
+            {
+                return NotFound();
+            }
+
+            return NoContent();
+        }
+        
         
     }
 }

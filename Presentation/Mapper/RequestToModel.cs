@@ -13,7 +13,10 @@ public class RequestToModel:Profile
     public RequestToModel()
     {
         CreateMap<CreateCustomerCommand, Customer>();
-        CreateMap<UpdateCustomerCommand, Customer>();
+        CreateMap<UpdateCustomerCommand, Customer>()
+            .ForMember(dest => dest.Usuario, opt => opt.MapFrom(src => src.Usuario))
+            .ForMember(dest => dest.Correo, opt => opt.MapFrom(src => src.Correo))
+            .ForMember(dest => dest.ImagenUsuario, opt => opt.MapFrom(src => src.ImagenUsuario));
         CreateMap<UpdateCustomerPasswordCommand, Customer>();
 
         CreateMap<CreateProductCommand, Product>()

@@ -30,12 +30,17 @@ public class CustomerCommandService:ICustomerCommandService
         return await _customerRepository.SaveAsync(customer);
     }
     
-    public async Task<bool> Handle(UpdateCustomerCommand command)
+    public async Task<bool> Handle(int id, UpdateCustomerCommand command)
     {
-        var existingCustomer = await _customerRepository.GetByIdAsync(command.Id);
+        var existingCustomer = await _customerRepository.GetByIdAsync(id);
+        if (existingCustomer == null)
+        {
+            return false;
+        }
 
-        var customer = _mapper.Map<UpdateCustomerCommand, Customer>(command);
-        return await _customerRepository.Update(customer, command.Id);
+        _mapper.Map(command, existingCustomer);
+
+        return await _customerRepository.Update(existingCustomer, id);
     }
     
     public async Task<bool> Handle(UpdateCustomerPasswordCommand command)
