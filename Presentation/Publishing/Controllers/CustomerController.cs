@@ -158,7 +158,7 @@ namespace WX_53_Artisania.Publishing.Controllers
         /// <response code="204">If the update is successful.</response>
         /// <response code="400">If the command is null or invalid.</response>
         /// <response code="404">If the customer is not found.</response>
-        [HttpPut("{id}")]
+        [HttpPut("update/{id}")]
         public async Task<IActionResult> UpdateAsync(int id, [FromBody] UpdateCustomerCommand command)
         {
             if (command == null)
