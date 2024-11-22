@@ -48,6 +48,7 @@ namespace WX_53_Artisania.Publishing.Controllers
         /// <returns>A list of customers if found.</returns>
         /// <response code="200">Returns the list of customers.</response>
         /// <response code="404">If no customers are found.</response>
+        [AllowAnonymous]
         [HttpGet]
         public async Task<IActionResult> GetAsync()
         {
@@ -69,6 +70,7 @@ namespace WX_53_Artisania.Publishing.Controllers
         /// <returns>The details of the customer if found.</returns>
         /// <response code="200">Returns the customer details.</response>
         /// <response code="404">If the customer is not found.</response>
+        [AllowAnonymous]
         [HttpGet("{id}", Name = "GetAsync")]
         public async Task<IActionResult> GetAsync(int id)
         {
