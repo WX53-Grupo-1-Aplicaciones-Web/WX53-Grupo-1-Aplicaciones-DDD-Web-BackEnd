@@ -92,4 +92,35 @@ public class CustomerUnitTest
         var exception = await Assert.ThrowsAsync<DuplicateNameException>(async () => await _customerCommandService.Handle(command));
         Assert.Equal("Usuario ya existe", exception.Message);
     }
+    
+    [Fact]
+    public async Task UpdateCustomerCommand_ShouldReturnTrue_WhenUpdateIsSuccessful()
+    {
+        // Arrange
+        var command = new UpdateCustomerCommand
+        {
+            Usuario = "updatedUser",
+            Correo = "updated@example.com",
+            ImagenUsuario = "http://example.com/updated_image.jpg",
+        };
+
+        var customer = new Customer
+        {
+            Id = 1,
+            Usuario = "existingUser",
+            Correo = "existing@example.com",
+            ImagenUsuario = "http://example.com/image.jpg",
+            IsArtisan = false,
+            Role = "user"
+        };
+
+        _customerRepositoryMock.Setup(x => x.GetByIdAsync(1)).ReturnsAsync(customer);
+        _customerRepositoryMock.Setup(x => x.Update(It.IsAny<Customer>(), It.IsAny<int>())).ReturnsAsync(true);
+
+        // Act
+        var result = await _customerCommandService.Handle(1, command);
+
+        // Assert
+        Assert.True(result);
+    }
 }
