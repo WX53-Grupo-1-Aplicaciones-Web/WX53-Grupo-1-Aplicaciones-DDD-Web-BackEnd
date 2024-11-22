@@ -35,13 +35,13 @@ namespace Domain.test
             // Arrange
             var command = new CreateProductCommand
             {
-                Nombre = "existingProduct"
+                Nombre = "Product1"
             };
 
             var existingProduct = new Product
             {
                 Id = 1,
-                Nombre = "existingProduct"
+                Nombre = "Product1"
             };
 
             _productRepositoryMock.Setup(x => x.GetByNameAsync(command.Nombre)).ReturnsAsync(existingProduct);
