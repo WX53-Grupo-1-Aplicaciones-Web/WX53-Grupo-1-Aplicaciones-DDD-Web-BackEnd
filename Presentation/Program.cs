@@ -102,7 +102,7 @@ app.UseSwaggerUI(c =>
     c.RoutePrefix = "swagger";  
 });
 app.UseCors("AllowAllPolicy");
-app.UseMiddleware<AuthenticationMiddlleware>();
+//app.UseMiddleware<AuthenticationMiddlleware>();
 app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
