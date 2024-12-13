@@ -44,3 +44,15 @@ C:\Users\USER\Desktop\TF app web\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\Domai
 C:\Users\USER\Desktop\TF app web\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\Domain\obj\Debug\net7.0\refint\Domain.dll
 C:\Users\USER\Desktop\TF app web\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\Domain\obj\Debug\net7.0\Domain.pdb
 C:\Users\USER\Desktop\TF app web\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\Domain\obj\Debug\net7.0\ref\Domain.dll
+C:\Users\USER\Desktop\Evaluación NAS CONSULTING EIRL\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\Domain\bin\Debug\net7.0\Domain.deps.json
+C:\Users\USER\Desktop\Evaluación NAS CONSULTING EIRL\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\Domain\bin\Debug\net7.0\Domain.dll
+C:\Users\USER\Desktop\Evaluación NAS CONSULTING EIRL\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\Domain\bin\Debug\net7.0\Domain.pdb
+C:\Users\USER\Desktop\Evaluación NAS CONSULTING EIRL\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\Desktop\Evaluación NAS CONSULTING EIRL\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+C:\Users\USER\Desktop\Evaluación NAS CONSULTING EIRL\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+C:\Users\USER\Desktop\Evaluación NAS CONSULTING EIRL\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\USER\Desktop\Evaluación NAS CONSULTING EIRL\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\Domain\obj\Debug\net7.0\Domain.sourcelink.json
+C:\Users\USER\Desktop\Evaluación NAS CONSULTING EIRL\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\Domain\obj\Debug\net7.0\Domain.dll
+C:\Users\USER\Desktop\Evaluación NAS CONSULTING EIRL\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\Domain\obj\Debug\net7.0\refint\Domain.dll
+C:\Users\USER\Desktop\Evaluación NAS CONSULTING EIRL\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\Domain\obj\Debug\net7.0\Domain.pdb
+C:\Users\USER\Desktop\Evaluación NAS CONSULTING EIRL\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\Domain\obj\Debug\net7.0\ref\Domain.dll

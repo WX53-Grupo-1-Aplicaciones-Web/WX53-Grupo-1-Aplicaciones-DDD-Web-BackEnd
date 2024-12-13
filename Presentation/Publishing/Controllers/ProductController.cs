@@ -135,6 +135,50 @@ namespace WX_53_Artisania.Publishing.Controllers
                 return StatusCode(StatusCodes.Status201Created, result);
             return BadRequest();
         }
+        // DELETE: api/Product/5
+        /// <summary>
+        /// Deletes a product by its ID.
+        /// </summary>
+        /// <remarks>
+        /// Request example:
+        ///
+        ///     DELETE /api/products/{id}
+        ///
+        /// </remarks>
+        /// <param name="id">The ID of the product to delete.</param>
+        /// <returns>No content if the deletion is successful.</returns>
+        /// <response code="204">If the deletion is successful.</response>
+        /// <response code="404">If the product is not found.</response>
+        [HttpDelete("delete")]
+        public async Task<IActionResult> DeleteAsync(int id)
+        {
+            var command = new DeleteProductCommand { Id = id };
+            var result = await _productCommandService.Handle(command);
+
+            if (result)
+            {
+                return NoContent();
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
+        
+        [HttpPut("update")]
+        public async Task<IActionResult> UpdateProduct(int id, [FromBody] UpdateProductCommand command)
+        {
+            var result = await _productCommandService.Handle(id, command);
+
+            if (result)
+            {
+                return NoContent();
+            }
+            else
+            {
+                return NotFound();
+            }
+        }
         
     }
 }

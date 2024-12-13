@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "a5Y2K6hZDNN43vXPrDC+uJ5jTHXxCjKN4riubzxW5JuVI0UJa1sXBRFqhcKmbMCM6Hu0WGyvqZixd1vnLaRwcw==",
+  "dgSpecHash": "ZAXbU9lqYuPMp2mxFK7KQtAjQC1glMZUNxZIzSK3E+4YYItO3Nhd80LvVog9FQ+k+h5ERizFPsMxqDn3FH19Wg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USER\\Desktop\\TF app web\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Presentation\\Presentation.csproj",
+  "projectFilePath": "C:\\Users\\USER\\Desktop\\Evaluación NAS CONSULTING EIRL\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Presentation\\Presentation.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\bcrypt.net\\0.1.0\\bcrypt.net.0.1.0.nupkg.sha512",

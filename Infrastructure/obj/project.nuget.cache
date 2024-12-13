@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lRHH3YC4L6Zk9Gns7BzXPavgPoUWgEfav1NXKsFCjq8ETvhSeA1SZdQ2coPzs5lX/BnHFn/pkVxnhMY0NKQSMQ==",
+  "dgSpecHash": "OEsDx2dbHHo1r2hZ1xdx3p4Gz8ljT5p0VPpr/BaWz/KktxogYWplulpgugxTtKPgRxs0NbgKXp6If0Gm6NJJaQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\USER\\Desktop\\TF app web\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\USER\\Desktop\\Evaluación NAS CONSULTING EIRL\\WX53-Grupo-1-Aplicaciones-DDD-Web-BackEnd\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.19\\microsoft.entityframeworkcore.7.0.19.nupkg.sha512",

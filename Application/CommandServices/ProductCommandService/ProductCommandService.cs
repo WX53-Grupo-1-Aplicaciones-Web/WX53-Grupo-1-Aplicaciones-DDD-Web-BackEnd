@@ -29,4 +29,24 @@ public class ProductCommandService:IProductCommandService
         var product = _mapper.Map<CreateProductCommand, Product>(command);
         return await _productRepository.SaveAsync(product);
     }
+
+    public async Task<bool> Handle(DeleteProductCommand command)
+    {
+        return await _productRepository.DeleteAsync(command.Id);
+    }
+
+    public async Task<bool> Handle(int id, UpdateProductCommand command)
+    {
+        var existingProduct = await _productRepository.GetByIdAsync(id);
+        if (existingProduct == null)
+        {
+            throw new Exception("Producto no encontrado.");
+        }
+
+        existingProduct.Nombre = command.Nombre;
+        existingProduct.Imagen = command.Imagen;
+        existingProduct.Descripcion = command.Descripcion;
+
+        return await _productRepository.UpdateAsync(existingProduct);
+    }
 }
