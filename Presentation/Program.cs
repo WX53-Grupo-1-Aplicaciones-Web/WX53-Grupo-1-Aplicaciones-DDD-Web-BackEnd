@@ -37,10 +37,10 @@ builder.Services.AddSwaggerGen(options =>
     options.SwaggerDoc("v1", new OpenApiInfo
     {
         Version = "v1",
-        Title = "Artisania API",
-        Description = "Artisania API - Grupo 1 - Aplicaciones Web",
+        Title = "NAS Consulting API",
+        Description = "NAS Consulting",
         TermsOfService = new Uri("https://artisania.azurewebsites.net/"),
-        Contact = new OpenApiContact
+        /*Contact = new OpenApiContact
         {
             Name = "Artisania - Landing Page",
             Url = new Uri("https://wx53-grupo-1-aplicaciones-web.github.io/WX53-Grupo-1-Aplicaciones-Web-LandingPage/")
@@ -49,7 +49,7 @@ builder.Services.AddSwaggerGen(options =>
         {
             Name = "Artisania Web Application",
             Url = new Uri("https://grupo-1-artisania-deployment.web.app/")
-        }
+        }*/
     });
     // using System.Reflection;
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";

@@ -12,12 +12,14 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WX_53_Artisania.Publishing.Controllers
 {
+    
     /// <summary>
     /// Controller to manage customer operations.
     /// </summary>
     /// <remarks>
     /// Provides endpoints to get all customers, get a customer by its ID, create a new customer, log in, register and update customer information.
     /// </remarks>
+    [ApiExplorerSettings(IgnoreApi = true)]
     [Route("api/customers")]
     [ApiController]
     public class CustomerController : ControllerBase
