@@ -149,7 +149,7 @@ namespace WX_53_Artisania.Publishing.Controllers
         /// <returns>No content if the deletion is successful.</returns>
         /// <response code="204">If the deletion is successful.</response>
         /// <response code="404">If the product is not found.</response>
-        [HttpDelete("delete")]
+        [HttpDelete("delete/{id}")]
         public async Task<IActionResult> DeleteAsync(int id)
         {
             var command = new DeleteProductCommand { Id = id };
@@ -165,7 +165,7 @@ namespace WX_53_Artisania.Publishing.Controllers
             }
         }
         
-        [HttpPut("update")]
+        [HttpPut("update/{id}")]
         public async Task<IActionResult> UpdateProduct(int id, [FromBody] UpdateProductCommand command)
         {
             var result = await _productCommandService.Handle(id, command);
