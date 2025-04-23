@@ -18,8 +18,7 @@ namespace WX_53_Artisania.Publishing.Controllers
     /// </summary>
     /// <remarks>
     /// Provides endpoints to get all customers, get a customer by its ID, create a new customer, log in, register and update customer information.
-    /// </remarks>
-    [ApiExplorerSettings(IgnoreApi = true)]
+    /// </remarks
     [Route("api/customers")]
     [ApiController]
     public class CustomerController : ControllerBase

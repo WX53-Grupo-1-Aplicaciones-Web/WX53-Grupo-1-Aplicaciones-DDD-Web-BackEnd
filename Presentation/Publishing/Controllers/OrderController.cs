@@ -17,7 +17,6 @@ namespace WX_53_Artisania.Publishing.Controllers
     /// <remarks>
     /// Provides endpoints to get all orders, get an order by its ID, and create a new order.
     /// </remarks>
-    [ApiExplorerSettings(IgnoreApi = true)]
     [Route("api/orders")]
     [ApiController]
     public class OrderController : ControllerBase
